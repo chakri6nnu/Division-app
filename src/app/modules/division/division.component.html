@@ -1,0 +1,55 @@
+<div class="container d-flex justify-content-center  " style="margin-top: 10%;">
+  <div class="col-md-6">
+    <div class="row custom-form bg-light p-4">
+      <div id="logo" class="text-center mb-4">
+        <h2>Division</h2>
+      </div>
+      <form role="form" id="form-buscar" class="row ">
+        <div class="col">
+          <div class="form-group mb-4">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="number"
+                name="firstValue"
+                placeholder="First Value"
+                required
+                [(ngModel)]="firstValue"
+                (ngModelChange)="onChangeSubmitEvent()"
+                [ngClass]="{ error: !isValidFirstValue() }"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="number"
+                name="secoundvalue"
+                placeholder="Secound Value"
+                required
+                [(ngModel)]="secoundvalue"
+                (ngModelChange)="onChangeSubmitEvent()"
+                [ngClass]="{ error: !isValidSecoundValue() }"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group mt-4">
+            <div class="input-group">
+              <input
+                placeholder="Result"
+                class="form-control"
+                type="number"
+                name="result"
+                [(ngModel)]="result"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
